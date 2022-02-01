@@ -10,13 +10,14 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import utilities.TestBase;
 
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class P04 {
+public class P04 extends TestBase {
     /*
      * Navigate to  https://www.saucedemo.com/
      * Enter the user name  as standard_user
@@ -25,14 +26,14 @@ public class P04 {
      *     T1 : Choose price low to high with soft Assert
      *     T2 : Verify item prices are sorted from low to high with hard Assert
      */
-    WebDriver driver;
-    @BeforeClass
-    public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver =new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
+//    WebDriver driver;
+//    @BeforeClass
+//    public void setUp(){
+//        WebDriverManager.chromedriver().setup();
+//        driver =new ChromeDriver();
+//        driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//    }
     @Test
     public void sauceDemoTest1() throws InterruptedException {
         driver.get("https://www.saucedemo.com/");
