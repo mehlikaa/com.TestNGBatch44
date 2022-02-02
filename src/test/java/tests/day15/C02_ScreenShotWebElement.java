@@ -28,7 +28,7 @@ public class C02_ScreenShotWebElement extends TestBase {
 
         TakesScreenshot tss=(TakesScreenshot) driver;
 
-        File webElementSS=new File("target/ScreenShot/webElement.pdf");
+        File webElementSS=new File("target/ScreenShot/webElement.jpeg");
 
         File geciciResim=sonucYazisiElement.getScreenshotAs(OutputType.FILE);
 

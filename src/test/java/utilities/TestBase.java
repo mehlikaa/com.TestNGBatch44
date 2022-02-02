@@ -11,7 +11,9 @@ import org.testng.annotations.BeforeClass;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 public abstract class TestBase {
 
@@ -36,7 +38,9 @@ public abstract class TestBase {
 
         TakesScreenshot tss=(TakesScreenshot) driver;
 
-        File tumSayfa=new File("target/ScreenShot/tumSayfa.jpg");
+        String tarih=new SimpleDateFormat("yyMMddhhmmss").format(new Date());
+
+        File tumSayfa=new File("target/ScreenShot"+tarih+"/tumSayfa" +".jpg");
 
         File geciciResim=tss.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(geciciResim,tumSayfa);
